@@ -1,0 +1,25 @@
+{
+  "name": "@qaforge/providers",
+  "version": "0.1.0",
+  "description": "LLM provider implementations for qaforge",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts --clean",
+    "test": "vitest run",
+    "dev": "tsup src/index.ts --format cjs --dts --watch"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
+    "@qaforge/core": "workspace:*",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "files": ["dist"],
+  "publishConfig": { "access": "public" }
+}
