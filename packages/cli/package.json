@@ -14,7 +14,10 @@
     "@qaforge/core": "workspace:*",
     "@qaforge/generator": "workspace:*",
     "@qaforge/healer": "workspace:*",
+    "@qaforge/planner": "workspace:*",
     "@qaforge/providers": "workspace:*",
+    "@qaforge/risk": "workspace:*",
+    "@qaforge/visual": "workspace:*",
     "commander": "^12.1.0"
   },
   "devDependencies": {

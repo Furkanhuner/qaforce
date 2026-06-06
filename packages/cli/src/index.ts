@@ -4,7 +4,9 @@ import { healCommand } from './commands/heal';
 import { initCommand } from './commands/init';
 import { reportCommand } from './commands/report';
 import { runCommand } from './commands/run';
-import { exploreCommand, visualCommand } from './commands/stubs';
+import { exploreCommand } from './commands/explore';
+import { visualCommand } from './commands/visual';
+import { mcpCommand } from './commands/stubs';
 
 const program = new Command()
   .name('qaforge')
@@ -12,12 +14,13 @@ const program = new Command()
   .version('0.1.0');
 
 program.addCommand(initCommand);
+program.addCommand(exploreCommand);
 program.addCommand(generateCommand);
 program.addCommand(runCommand);
-program.addCommand(reportCommand);
 program.addCommand(healCommand);
-program.addCommand(exploreCommand);
 program.addCommand(visualCommand);
+program.addCommand(reportCommand);
+program.addCommand(mcpCommand);
 
 program.parseAsync(process.argv).catch((err: unknown) => {
   console.error('Error:', err instanceof Error ? err.message : String(err));
