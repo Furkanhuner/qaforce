@@ -1,7 +1,6 @@
 import { tmpdir } from 'os';
 import { join } from 'path';
-import { describe, expect, it, vi } from 'vitest';
-import type { LLMProvider } from '@qaforge/providers';
+import { describe, expect, it } from 'vitest';
 import { LocatorStore } from '../store';
 
 const mockHealResponse = {

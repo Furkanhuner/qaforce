@@ -11,10 +11,6 @@ export const ClassificationSchema = z.object({
 
 export type Classification = z.infer<typeof ClassificationSchema>;
 
-const SYSTEM_PROMPT = `You are a visual QA expert. Analyze two screenshots (baseline vs current) and classify pixel differences.
-Distinguish meaningful regressions (layout shifts, missing elements, wrong colors) from harmless noise (anti-aliasing, subpixel rendering, font hinting).
-Return ONLY valid JSON matching the schema — no markdown.`;
-
 export async function classifyDiff(
   provider: LLMProvider,
   baselineBuffer: Buffer,
